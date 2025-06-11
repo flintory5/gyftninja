@@ -1,5 +1,17 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Issue and Milestone Policy
+
+All work for this project must be tracked in GitHub issues.
+
+- **No work should be started without a corresponding GitHub issue.**
+- **Each issue must be assigned to a Milestone in GitHub.**
+- **Each issue must include a documented plan describing how the work will be completed.**
+- **Each issue requires at least 90% code coverage and a mutation testing score of 80 or higher.**
+- **Each issue must be accepted by the project owner before it can be marked complete.**
+- This ensures traceability, planning, and progress tracking for all tasks, features, and bug fixes.
+
+> Contributors and AI assistants: Before starting any new work, create or reference an existing issue, ensure it is linked to an appropriate Milestone, includes a documented plan, and meets the code quality requirements. Await project owner acceptance before closing the issue.
