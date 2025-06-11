@@ -1,5 +1,54 @@
 ---
-description:
-globs:
-alwaysApply: false
+description: 
+globs: 
+alwaysApply: true
 ---
+# Architecture, Coding, Security, and Testing Standards
+
+This project follows strict standards for architecture, coding style, security, and testing. All contributors and AI assistants should consult and adhere to these standards.
+
+## Reference
+- Full details: [architecture_standards.md](mdc:docs/architecture/architecture_standards.md)
+
+## Key Points
+
+### Architecture
+- Use microservices, serverless, event-driven, or lightweight MVC patterns.
+- Avoid monoliths.
+- Structure code into layers: presentation, application, domain, infrastructure.
+- For frontend state: use Context API (React), Zustand, Redux Toolkit, or Pinia (Vue).
+
+### Coding Style
+- TypeScript/JS: Prettier for formatting, ESLint for linting (with recommended rulesets).
+- Python: Black for formatting, Flake8 for linting.
+- Naming: camelCase (TS/JS vars/functions), snake_case (Python), PascalCase (classes/types), UPPER_SNAKE_CASE (constants).
+- Documentation: TSDoc (TS), docstrings (Python).
+
+### Deployment
+- Use GitHub Actions or GitLab CI for CI/CD.
+- Deploy to AWS Lambda (serverless) or AWS ECS (containers).
+- Infrastructure as Code: Terraform preferred.
+- Use blue-green, canary, or rolling deployment strategies.
+
+### Languages & Frameworks
+- Backend: TypeScript/Node.js (Express), fallback to Python (Flask).
+- Frontend: TypeScript (Next.js preferred, then Vue.js, then React).
+- Databases: PostgreSQL, AWS Aurora, DynamoDB, Neo4j.
+- Messaging: AWS SQS. Caching: Redis. APIs: GraphQL preferred.
+
+### Security
+- Auth: OAuth2/OIDC (Auth0, AWS Cognito), JWTs with short expiry and secure signing.
+- Secrets: Use Doppler, never commit secrets.
+- Encryption: TLS 1.2+ in transit, DB encryption at rest.
+- CI/CD: SAST, SCA, and secrets scanning required.
+- API: Input validation, rate limiting, HTTPS required.
+
+### Testing
+- Follow the test pyramid: unit > integration > E2E.
+- TDD encouraged. Minimum 85% coverage.
+- Frameworks: Mocha/Jest/Pytest (unit/integration), Playwright (E2E).
+- Place tests in `tests` or `__tests__` directories. Use standard naming conventions.
+
+---
+
+For full details and rationale, see [architecture_standards.md](mdc:docs/architecture/architecture_standards.md).
