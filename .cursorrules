@@ -1,0 +1,77 @@
+# Cursor Project Rules
+
+[architecture]
+patterns = ["microservices", "serverless", "event-driven", "mvc (lightweight)"]
+discourage = ["monoliths"]
+layers = ["presentation", "application", "domain", "infrastructure"]
+frontend_state_react = ["context-api", "zustand", "redux-toolkit"]
+frontend_state_vue = ["pinia"]
+
+[coding_style]
+formatter_typescript = "prettier"
+linter_typescript = "eslint"
+eslint_rulesets = ["eslint:recommended", "plugin:@typescript-eslint/recommended", "eslint-config-prettier"]
+formatter_python = "black"
+linter_python = "flake8"
+naming_variables_functions_typescript = "camelCase"
+naming_variables_functions_python = "snake_case"
+naming_classes_types = "PascalCase"
+naming_constants = "UPPER_SNAKE_CASE"
+documentation_typescript = "tsdoc"
+documentation_python = "standard docstrings"
+
+[deployment]
+ci_cd = ["github-actions", "gitlab-ci"]
+required_steps = ["test", "build", "deploy"]
+deployment_targets = ["aws-lambda", "aws-ecs"]
+deployment_strategies = ["blue-green", "canary", "rolling"]
+infrastructure_as_code = ["terraform", "aws-cloudformation", "pulumi"]
+
+[languages_frameworks]
+backend_primary = ["typescript", "nodejs"]
+backend_secondary = ["javascript", "nodejs"]
+backend_fallback = ["python"]
+backend_frameworks_nodejs = ["express"]
+backend_frameworks_python = ["flask"]
+frontend_primary = ["typescript"]
+frontend_frameworks_preferred = ["nextjs"]
+frontend_frameworks_secondary = ["vuejs"]
+frontend_frameworks_tertiary = ["react"]
+databases_relational = ["postgresql", "aws-aurora"]
+databases_nonrelational = ["aws-dynamodb"]
+databases_graph = ["neo4j"]
+message_queues = ["aws-sqs"]
+caching = ["redis"]
+cloud = ["aws"]
+api_preferred = ["graphql"]
+api_secondary = ["rest"]
+
+[security]
+auth_preferred = ["oauth2", "oidc"]
+auth_providers = ["auth0", "aws-cognito"]
+jwt_require = ["short-expiry", "secure-signing", "refresh-tokens"]
+secrets_management = ["doppler"]
+secrets_discourage = ["source-control", "plaintext-env"]
+encryption_transit = "tls1.2+"
+encryption_rest = ["built-in-db-encryption", "application-level", "kms"]
+scanning_require = ["sast", "sca", "secrets"]
+api_require = ["https", "rate-limiting", "input-validation"]
+
+[testing]
+test_pyramid = true
+tdd = true
+tdd_steps = ["write-test", "run-test", "write-code", "refactor"]
+tdd_coverage_minimum = 85
+test_frameworks_unit = ["mocha", "jest", "pytest"]
+test_frameworks_integration = ["mocha", "pytest"]
+test_frameworks_e2e = ["playwright"]
+test_structure_location = ["tests", "__tests__"]
+test_naming_typescript = ["*.test.ts", "*.spec.ts"]
+test_naming_python = ["test_*.py"]
+
+[enforcement]
+severity_preferred = "warning"
+severity_required = "error"
+severity_discouraged = "warning"
+auto_fix = true
+suggestions = true 
