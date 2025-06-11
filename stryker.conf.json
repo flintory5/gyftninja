@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stryker-mutator/stryker/master/packages/api/schema/stryker-schema.json",
+  "mutator": "typescript",
+  "testRunner": "jest",
+  "jest": {
+    "projectType": "custom",
+    "configFile": "./jest.config.js"
+  },
+  "reporters": ["html", "clear-text", "progress"],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "./tsconfig.json",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 80
+  }
+} 
