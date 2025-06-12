@@ -46,16 +46,17 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         {/* Hero Section - Brand introduction and value proposition */}
-        <div style={{ textAlign: 'center', maxWidth: '600px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           {/* Brand title with gradient effect and emoji for visual appeal */}
           <h1 style={{ 
             fontSize: '3.5rem', 
             fontWeight: 'bold', 
             marginBottom: '1rem',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #2ecc40 0%, #ffd700 60%, #e74c3c 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            backgroundClip: 'text',
+            textShadow: '0 2px 12px rgba(255, 215, 0, 0.18)'
           }}>
             🎁 Gyft Ninja
           </h1>
@@ -89,15 +90,19 @@ export default function Home() {
             <button 
               className={styles.primary}
               style={{
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #ffd700 0%, #2ecc40 60%, #e74c3c 100%)',
                 border: 'none',
                 fontSize: '1.1rem',
-                fontWeight: '600',
+                fontWeight: '700',
                 padding: '0 32px',
-                height: '56px'
+                height: '56px',
+                color: '#1a1a1a',
+                boxShadow: '0 4px 24px 0 rgba(255, 215, 0, 0.18), 0 1.5px 6px 0 rgba(46, 204, 64, 0.10), 0 1.5px 6px 0 rgba(231, 76, 60, 0.10)',
+                borderRadius: '32px',
+                letterSpacing: '0.02em'
               }}
             >
-              🎯 Find the Perfect Gift
+              Find the Perfect Gift
             </button>
           </div>
         </div>
@@ -114,13 +119,15 @@ export default function Home() {
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
-            borderRadius: '12px', 
-            background: 'var(--gray-alpha-100)',
-            border: '1px solid var(--gray-alpha-200)'
+            borderRadius: '16px', 
+            background: 'linear-gradient(120deg, #fffbe9 60%, #ffd700 100%)',
+            border: '1.5px solid #ffd700',
+            boxShadow: '0 4px 24px 0 rgba(255, 215, 0, 0.18), 0 1.5px 6px 0 rgba(46, 204, 64, 0.10), 0 1.5px 6px 0 rgba(231, 76, 60, 0.10)',
+            color: '#1a1a1a'
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🧠</div>
             <h3 style={{ marginBottom: '0.5rem', fontSize: '1.2rem' }}>AI-Powered Intelligence</h3>
-            <p style={{ color: '#666', fontSize: '0.9rem' }}>
+            <p style={{ color: '#14532d', fontSize: '0.9rem', fontWeight: 600 }}>
               Advanced algorithms analyze personality traits and preferences
             </p>
           </div>
@@ -129,13 +136,15 @@ export default function Home() {
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
-            borderRadius: '12px', 
-            background: 'var(--gray-alpha-100)',
-            border: '1px solid var(--gray-alpha-200)'
+            borderRadius: '16px', 
+            background: 'linear-gradient(120deg, #fffbe9 60%, #ffd700 100%)',
+            border: '1.5px solid #ffd700',
+            boxShadow: '0 4px 24px 0 rgba(255, 215, 0, 0.18), 0 1.5px 6px 0 rgba(46, 204, 64, 0.10), 0 1.5px 6px 0 rgba(231, 76, 60, 0.10)',
+            color: '#1a1a1a'
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💝</div>
             <h3 style={{ marginBottom: '0.5rem', fontSize: '1.2rem' }}>Personalized Suggestions</h3>
-            <p style={{ color: '#666', fontSize: '0.9rem' }}>
+            <p style={{ color: '#7f1d1d', fontSize: '0.9rem', fontWeight: 600 }}>
               Tailored recommendations based on relationships and occasions
             </p>
           </div>
@@ -144,13 +153,15 @@ export default function Home() {
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
-            borderRadius: '12px', 
-            background: 'var(--gray-alpha-100)',
-            border: '1px solid var(--gray-alpha-200)'
+            borderRadius: '16px', 
+            background: 'linear-gradient(120deg, #fffbe9 60%, #ffd700 100%)',
+            border: '1.5px solid #ffd700',
+            boxShadow: '0 4px 24px 0 rgba(255, 215, 0, 0.18), 0 1.5px 6px 0 rgba(46, 204, 64, 0.10), 0 1.5px 6px 0 rgba(231, 76, 60, 0.10)',
+            color: '#1a1a1a'
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>✨</div>
             <h3 style={{ marginBottom: '0.5rem', fontSize: '1.2rem' }}>Unforgettable Moments</h3>
-            <p style={{ color: '#666', fontSize: '0.9rem' }}>
+            <p style={{ color: '#bfa100', fontSize: '0.9rem', fontWeight: 600 }}>
               Create lasting memories with gifts that truly matter
             </p>
           </div>
