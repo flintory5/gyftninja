@@ -1,11 +1,53 @@
 import React from "react";
 import styles from "./page.module.css";
 
+
+
+/**
+ * Landing page component for the Gyft Ninja application.
+ * 
+ * This is the main entry point and home page that introduces users to the
+ * AI-powered gift recommendation platform. The component implements a modern
+ * landing page design with:
+ * 
+ * **Key Sections:**
+ * - Hero section with brand identity and value proposition
+ * - Call-to-action button for user engagement
+ * - Feature showcase highlighting core platform benefits
+ * - Footer with copyright and branding information
+ * 
+ * **Design Features:**
+ * - Gradient brand title with emoji for visual appeal
+ * - Responsive grid layout for feature cards
+ * - CSS modules for scoped styling
+ * - Inline styles for dynamic gradient effects
+ * - Semantic HTML structure for accessibility
+ * 
+ * **Accessibility:**
+ * - Proper heading hierarchy (h1, h3)
+ * - Semantic HTML elements (main, footer)
+ * - High contrast colors for readability
+ * - Descriptive text content for screen readers
+ * 
+ * @component
+ * @returns The complete landing page JSX structure
+ * 
+ * @example
+ * ```tsx
+ * // This component is automatically rendered at the root route "/"
+ * // by Next.js App Router when users visit the homepage
+ * <Home />
+ * ```
+ * 
+ * @see {@link https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#pages | Next.js Pages Documentation}
+ */
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {/* Hero Section - Brand introduction and value proposition */}
         <div style={{ textAlign: 'center', maxWidth: '600px' }}>
+          {/* Brand title with gradient effect and emoji for visual appeal */}
           <h1 style={{ 
             fontSize: '3.5rem', 
             fontWeight: 'bold', 
@@ -18,6 +60,7 @@ export default function Home() {
             🎁 Gyft Ninja
           </h1>
           
+          {/* Primary value proposition with emphasis on key benefits */}
           <p style={{ 
             fontSize: '1.5rem', 
             marginBottom: '2rem', 
@@ -27,6 +70,7 @@ export default function Home() {
             Discover <strong>unbelievable gift ideas</strong> with AI-powered intelligence that knows exactly what your loved ones want
           </p>
 
+          {/* Detailed description explaining the platform's approach */}
           <div style={{ marginBottom: '3rem' }}>
             <p style={{ 
               fontSize: '1.1rem', 
@@ -40,6 +84,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Call-to-action section with primary button */}
           <div className={styles.ctas}>
             <button 
               className={styles.primary}
@@ -57,6 +102,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Features Section - Three-column grid showcasing key platform benefits */}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
@@ -64,6 +110,7 @@ export default function Home() {
           marginTop: '4rem',
           maxWidth: '800px'
         }}>
+          {/* Feature Card 1: AI Intelligence */}
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
@@ -78,6 +125,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Feature Card 2: Personalization */}
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
@@ -92,6 +140,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Feature Card 3: Memorable Experiences */}
           <div style={{ 
             textAlign: 'center', 
             padding: '2rem', 
@@ -108,6 +157,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Footer Section - Copyright and branding information */}
       <footer className={styles.footer}>
         <p style={{ color: '#888', fontSize: '0.9rem', textAlign: 'center' }}>
           © 2024 Gyft Ninja - Making gift-giving an art form

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stryker-mutator/stryker/master/packages/api/schema/stryker-schema.json",
+  "mutate": [
+    "app/**/*.{js,jsx,ts,tsx}",
+    "!app/**/*.test.{js,jsx,ts,tsx}",
+    "!app/**/__tests__/**/*"
+  ],
+  "testRunner": "jest",
+  "jest": {
+    "projectType": "custom",
+    "configFile": "./jest.config.js"
+  },
+  "reporters": ["html", "clear-text", "progress"],
+  "coverageAnalysis": "perTest",
+  "tsconfigFile": "./tsconfig.json",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 80
+  },
+  "timeoutMS": 60000,
+  "concurrency": 4
+} 
