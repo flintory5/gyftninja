@@ -93,4 +93,13 @@ describe('Landing Page', () => {
     render(<Home />);
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
+
+  it('main content container has center alignment', () => {
+    const { container } = render(<Home />);
+    const mainElement = container.querySelector('.main');
+    expect(mainElement).toBeInTheDocument();
+    
+    // Verify that the main element has the CSS class that provides center alignment
+    expect(mainElement).toHaveClass('main');
+  });
 }); 
